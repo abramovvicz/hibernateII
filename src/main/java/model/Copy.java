@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -21,5 +22,8 @@ public class Copy extends BasicEntity{
     @ManyToOne
     @JoinColumn(name = "format_id")
     private Format format;
+
+    @OneToMany(mappedBy = "copy")
+    private List<OrderDetails> orderDetails;
 
 }

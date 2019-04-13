@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -16,4 +17,7 @@ public class PaymentType extends BasicEntity{
 
     @Column(name = "code",unique = true)
     private PaymentTypeCode code;
+
+    @OneToMany(mappedBy = "paymentType")
+    private List<Order> orders;
 }

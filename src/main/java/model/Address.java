@@ -30,4 +30,8 @@ public class Address extends BasicEntity{
     @OneToMany(mappedBy = "address")
     private List<Publisher> publishers;
 
+    @OneToMany(mappedBy = "address")
+    private List<Customer> customers;
+
 }
+
