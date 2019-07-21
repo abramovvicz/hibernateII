@@ -36,7 +36,8 @@ public class Customer extends BasicEntity{
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
 
-    @ManyToOne
+//    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "address_id")
     private Address address;
 }

@@ -4,5 +4,7 @@ public enum CategoryCode {
     FANTASY,
     HORROR,
     CRIME,
-    SCI_FI;
+    SCI_FI,
+    HISTORY,
+    BIOGRAPHY;
 }
